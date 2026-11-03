@@ -14,24 +14,24 @@
 
 (forall (x)
 	(iff	(mat x)
-		(point x)))
+		(line x)))
 
 (forall (x)
 	(iff	(MaterialObject x)
-		(line x)))
+		(point x)))
 
 (forall (x y)
 	(iff	(chunkOf x y)
-		(part x y)))
+		(leq x y)))
 
 (forall (x y)
 	(iff	(portionOf x y)
-		(leq x y)))
+		(part x y)))
 
 (forall (x y)
 	(iff	(constitutes x y)
 		(and	(in x y)
-			(point x)
-			(line y))))
+			(line x)
+			(point y))))
 
 )
